@@ -148,30 +148,30 @@ layers:
   - MUTE
   - VOL DN
   - VOL UP
-  - BRIGHTNESS DEC
   - BRIGHTNESS INC
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - RGB BRI
+  - RGB EFF
+  - RGB SPI
+  - RGB HUI
+  - RGB SAI
   - {t: ▽, type: trans}
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
+  - BRIGHTNESS DEC
+  - RGB BRD
+  - RGB EFR
+  - RGB SPD
+  - RGB HUD
+  - RGB SAD
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - RGB TOG
 combos:
 - p: [0, 38, 5]
   k: BT CLR
