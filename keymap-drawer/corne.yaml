@@ -36,13 +36,13 @@ layers:
   - ','
   - .
   - /
-  - LEFT ALT
+  - ENTER
   - LEFT GUI
   - nav
   - SPACE
   - SPACE
   - symbols
-  - ENTER
+  - LEFT ALT
   symbols:
   - {t: ▽, type: trans}
   - '1'
