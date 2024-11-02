@@ -130,7 +130,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   extended:
-  - {t: ▽, type: trans}
   - F1
   - F2
   - F3
@@ -141,6 +140,7 @@ layers:
   - F8
   - F9
   - F10
+  - F11
   - F12
   - PP
   - PREV
