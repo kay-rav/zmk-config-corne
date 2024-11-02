@@ -70,18 +70,27 @@
 
   keymap {
     compatible = "zmk,keymap";
-
+// ------------------------------------------------------------------------------------------------------
+// | TAB  |   Q   |   W   |   E   |   R   |  T    |       |  Y    |  U      |  I    | O | P |   BKSP    |
+// | SHFT |   A   |   S   |   D   |   F   |  G    |       |  H    |  J      |  K    | L | ; |    '      |
+// | CTRL |   Z   |   X   |   C   |   V   |  B    |       |  N    |  M      |  ,    | . | - | LEFT ALT  |
+//                        |  WIN  |  NAV  | SPACE |       | SPACE | SYMBOL  | ENTER |
     base_layer {
       label = "BASE";
       bindings = <
-&mt LC(LS(LALT)) TAB  &kp Q  &kp W  &kp E         &kp R     &kp T       &kp Y      &kp U    &kp I       &kp O     &kp P       &kp BSPC
-&kp LSHIFT            &kp A  &kp S  &kp D         &kp F     &kp G       &kp H      &kp J    &kp K       &kp L     &kp SEMI    &kp SINGLE_QUOTE
-&kp LEFT_CONTROL      &kp Z  &kp X  &kp C         &kp V     &kp B       &kp N      &kp M    &kp COMMA   &kp DOT   &kp SLASH   &kp LEFT_ALT
-                                    &kp LEFT_GUI  &mo 2     &kp SPACE    &kp SPACE  &mo 1    &kp ENTER
+&mt LC(LS(LALT)) TAB  &kp Q   &kp W   &kp E         &kp R   &kp T       &kp Y   &kp U   &kp I       &kp O     &kp P       &kp BSPC
+&kp LSHIFT            &kp A   &kp S   &kp D         &kp F   &kp G       &kp H   &kp J   &kp K       &kp L     &kp SEMI    &kp SINGLE_QUOTE
+&kp LEFT_CONTROL      &kp Z   &kp X   &kp C         &kp V   &kp B       &kp N   &kp M   &kp COMMA   &kp DOT   &kp SLASH   &kp LEFT_ALT
+                                      &kp LEFT_GUI  &mo 2   &kp SPACE   &kp SPACE &mo 1 &kp ENTER
       >;
     };
 
     symbols_layer {
+// ----------------------------------------------------------------------------------
+// |      |  1  |  2  |  3  |  4  |  5  |       |  6  |  7  |  8  |  9  |  0  |  -  |
+// | ESC  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |     |
+// |      |  `  |  ~  |  |  |  =  |  +  |       |  [  |  {  |  }  |  ]  |  \  |     |
+//                    |     |     |     |       |     |     |     |
       label = "SYMBOLS";
       bindings = <
 &trans    &kp N1      &kp N2      &kp N3      &kp N4        &kp N5      &kp N6            &kp N7              &kp N8          &kp N9            &kp N0          &kp MINUS
@@ -92,6 +101,11 @@
     };
 
     nav_layer {
+// ------------------------------------------------------------------------------------------------------------------------------------
+// | GUI+CTRL+TAB |       | LGUI+[  | SHFT+TAB  | TAB       | GUI+] |       | ALT+LEFT  | F8        | F9        | F10         | F11       | F12       |
+// | ESC          |       |         | SCROLL DN | SCROLL UP |       |       | BRI+      | RGB BRI+  | RGB EFF+  | RGB SPEED+  | RGB HUE+  | RGB SAT+  |
+// |              |       | HOME    | PAGE DN   | PAGE UP   | END   |       | BRI-      | RGB BRI-  | RGB EFF-  | RGB SPEED-  | RGB HUE-  | RGB SAT-  |
+//                                  |           |           |       |       |           |           |           |
       label = "NAV";
       bindings = <
 &kp LG(LC(TAB))   &trans    &kp LG(LEFT_BRACKET)  &kp LS(TAB)        &kp TAB          &kp LG(RIGHT_BRACKET)   &kp LA(LEFT)        &kp LA(DOWN)  &kp LA(UP)  &kp LA(RIGHT)   &trans    &trans
@@ -102,9 +116,14 @@
     };
 
     extended_layer {
+// ------------------------------------------------------------------------------------------------------------------------------------
+// | F1         | F2    | F3    | F4    | F5    | F6    |       | F7    | F8        | F9        | F10         | F11       | F12       |
+// | PLAY/PAUSE | PREV  | NEXT  | MUTE  | VOL+  | VOL+  |       | BRI+  | RGB BRI+  | RGB EFF+  | RGB SPEED+  | RGB HUE+  | RGB SAT+  |
+// |            | BT 0  | BT 1  | BT 2  | BT 3  | BT 4  |       | BRI-  | RGB BRI-  | RGB EFF-  | RGB SPEED-  | RGB HUE-  | RGB SAT-  |
+//                              |       |       |       |       |       |           |           |
       label = "EXT";
       bindings = <
-&trans        &kp F1        &kp F2          &kp F3        &kp F4          &kp F5          &kp F6                &kp F7            &kp F8            &kp F9            &kp F10           &kp F12
+&kp F1        &kp F2        &kp F3          &kp F4        &kp F5          &kp F6          &kp F7                &kp F8            &kp F9            &kp F10           &kp F11           &kp F12
 &kp C_PP      &kp C_PREV    &kp C_NEXT      &kp C_MUTE    &kp C_VOL_DN    &kp C_VOL_UP    &kp C_BRIGHTNESS_INC  &rgb_ug RGB_BRI   &rgb_ug RGB_EFF   &rgb_ug RGB_SPI   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI
 &trans        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4    &kp C_BRIGHTNESS_DEC  &rgb_ug RGB_BRD   &rgb_ug RGB_EFR   &rgb_ug RGB_SPD   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD
                                             &trans        &trans          &trans          &trans                &trans            &rgb_ug RGB_TOG
